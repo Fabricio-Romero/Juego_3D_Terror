@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://boynf7hxx7trp"]
+
+[ext_resource type="PackedScene" uid="uid://bnl7effal4ppg" path="res://Escenas/jugador.tscn" id="1_6lbni"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eqas1"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6lbni"]
+size = Vector3(10, 0.5, 10)
+
+[node name="Main" type="Node" unique_id=1331176679]
+
+[node name="Suelo" type="StaticBody3D" parent="." unique_id=387230323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Suelo" unique_id=1017483327]
+shape = SubResource("BoxShape3D_eqas1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Suelo" unique_id=833012304]
+mesh = SubResource("BoxMesh_6lbni")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=315241941]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1, 0)
+shadow_enabled = true
+
+[node name="Jugador" parent="." unique_id=707297157 instance=ExtResource("1_6lbni")]
+
+[node name="CamaraPivot" type="Marker3D" parent="." unique_id=97226862]
+
+[node name="Camera3D" type="Camera3D" parent="CamaraPivot" unique_id=679958438]
+transform = Transform3D(-1, -6.181724e-08, 6.181724e-08, 0, 0.7071068, 0.7071068, -8.742278e-08, 0.7071068, -0.7071068, 0, 7, -8)
+size = 6.607
