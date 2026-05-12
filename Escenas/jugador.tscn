@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnl7effal4ppg"]
 
-[ext_resource type="PackedScene" uid="uid://bqyrcu0el28oy" path="res://Assets/Modelos3D/Prototyping_Human_Size_Reference_Model.fbx" id="1_83bx5"]
 [ext_resource type="Script" uid="uid://cxco1ud6e18dg" path="res://Escenas/jugador.gd" id="1_pd7u1"]
+[ext_resource type="PackedScene" uid="uid://du4xmypgn8ujq" path="res://Assets/Modelos3D/elCulon.fbx" id="2_pd7u1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pd7u1"]
 radius = 0.15136719
@@ -12,8 +12,13 @@ script = ExtResource("1_pd7u1")
 
 [node name="Pivot" type="Node3D" parent="." unique_id=1448965416]
 
-[node name="Character" parent="Pivot" unique_id=1905320854 instance=ExtResource("1_83bx5")]
+[node name="Character" parent="Pivot" unique_id=691240386 instance=ExtResource("2_pd7u1")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=299837290]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86694336, 0)
 shape = SubResource("CapsuleShape3D_pd7u1")
+
+[node name="CameraPivot" type="Node3D" parent="." unique_id=381885258]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot" unique_id=1072162422]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 1.7, 0)
