@@ -2,13 +2,15 @@ class_name Player
 extends CharacterBody3D
 
 # La velocidad a la que se mueve el personaje
-@export var velocidad = 14
+@export var velocidad = 5
 # La gravedad que afecta al personaje
 @export var gravedad = 75
 
 @export var sensibilidad = 0.002
 
 @onready var camera = $CameraPivot/Camera3D
+
+@onready var animation = $AnimationPlayer
 
 var topeCam = 0.0
 
@@ -32,18 +34,22 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("move_right"):
 		# La direccion en x se resta en 1
 		direccion -= transform.basis.x
+		animation.play("Caminar")
 	# Si el jugador presiona la accion asignada a move_left
 	if Input.is_action_pressed("move_left"):
 		# La direccion en x se suma en 1
 		direccion += transform.basis.x
+		animation.play("Caminar")
 	# Si el jugador presiona la accion asignada a move_back
 	if Input.is_action_pressed("move_back"):
 		# La direccion en z se resta en 1
 		direccion -= transform.basis.z
+		animation.play("Caminar")
 	# Si el jugador presiona la accion asignada a move_forward
 	if Input.is_action_pressed("move_forward"):
 		# La direccion en z se suma en 1
 		direccion += transform.basis.z
+		animation.play("Caminar")
 	# Si el jugador presiona la accion asignada a jump
 	if Input.is_action_pressed("jump"):
 		# La direccion en y se suma en 1
