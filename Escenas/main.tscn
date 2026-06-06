@@ -18,13 +18,4 @@ shape = SubResource("BoxShape3D_eqas1")
 [node name="escuela" parent="Escuela" unique_id=875977012 instance=ExtResource("1_vt1rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Escuela" unique_id=2038143599]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0)
-omni_range = 35.0
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=315241941]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
-shadow_enabled = true
-
 [node name="Jugador" parent="." unique_id=707297157 instance=ExtResource("1_6lbni")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

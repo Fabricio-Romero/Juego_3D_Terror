@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dslxus0afb3s6"]
+
+[ext_resource type="Script" uid="uid://b4i8tgc8xaek0" path="res://Linterna.gd" id="1_msvvr"]
+[ext_resource type="PackedScene" uid="uid://cpiq3vfeqyw2" path="res://Assets/Modelos3D/linterna.fbx" id="2_hwtji"]
+
+[node name="NodeLinterna" type="Node3D" unique_id=1796838293]
+script = ExtResource("1_msvvr")
+
+[node name="linterna" parent="." unique_id=1099619611 instance=ExtResource("2_hwtji")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="linterna" unique_id=1147494704]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 0, 0.07331827)
+visible = false
+spot_range = 29.171
+spot_angle = 42.08
