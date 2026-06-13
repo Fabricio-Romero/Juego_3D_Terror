@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bnl7effal4ppg" path="res://Escenas/jugador.tscn" id="1_6lbni"]
 [ext_resource type="PackedScene" uid="uid://cp3iblpioqslw" path="res://Assets/Modelos3D/escuela.fbx" id="1_vt1rs"]
+[ext_resource type="Script" uid="uid://cxaqe56wjf0fj" path="res://Escenas/game_controller.gd" id="3_0kh0y"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eqas1"]
 size = Vector3(100, 0.5, 100)
@@ -19,3 +20,6 @@ shape = SubResource("BoxShape3D_eqas1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
 
 [node name="Jugador" parent="." unique_id=707297157 instance=ExtResource("1_6lbni")]
+
+[node name="GameController" type="Node" parent="." unique_id=354835355]
+script = ExtResource("3_0kh0y")

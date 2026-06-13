@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dslxus0afb3s6"]
 
-[ext_resource type="Script" uid="uid://b4i8tgc8xaek0" path="res://Linterna.gd" id="1_msvvr"]
+[ext_resource type="Script" uid="uid://b4i8tgc8xaek0" path="res://Escenas/Linterna.gd" id="1_msvvr"]
 [ext_resource type="PackedScene" uid="uid://cpiq3vfeqyw2" path="res://Assets/Modelos3D/linterna.fbx" id="2_hwtji"]
 
 [node name="NodeLinterna" type="Node3D" unique_id=1796838293]
